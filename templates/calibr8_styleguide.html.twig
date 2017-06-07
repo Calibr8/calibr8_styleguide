@@ -1,0 +1,18 @@
+<section class="sg-introduction extendfull default-block-margin-bottom">
+	<p class="lead">This style guide is intended for those involved in the development and content editing of this website. It provides a list of available classes, colors, icons and hints for writing consistent HTML markup.</p>
+</section>
+
+{% if menu_items %}
+	<section class="sg-menu-wrapper default-block-margin-bottom menu-horizontal clearfix default-border-top default-border-bottom">
+		<ul class="menu sg-menu">
+			{% for menu in menu_items %}
+				 <li><a class="sg-menu-item" data-weight="{{ menu.weight }}" href="#{{ menu.menu_link }}">{{ menu.menu_title }}</a></li>
+			{% endfor %}
+		</ul>
+	</section>
+{% endif %}
+
+<section class="sg-content-wrapper">
+	{{ content }}
+	{{ form }}
+</section>

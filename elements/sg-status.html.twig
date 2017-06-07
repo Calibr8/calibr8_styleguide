@@ -1,0 +1,32 @@
+<p>Used for confirmations and error messages.</p>
+
+<div class="row">
+  <div class="col col-md-6">
+    <div class="sg-example">
+      {{ status }}
+    </div>
+  </div>
+  <div class="col col-md-6">
+    <pre class="sg-code">
+      <code class="language-markup">
+        {{ styleguideHtml('
+<div class="messages messages--status">
+  <h2 class="visually-hidden">Status message</h2>
+  Lorem ipsum.
+</div>
+
+<div class="messages messages--warning">
+  <h2 class="visually-hidden">Warning message</h2>
+  Lorem ipsum.
+</div>
+
+<div class="messages messages--error">
+  <h2 class="visually-hidden">Error message</h2>
+  Lorem ipsum.
+</div>
+
+      ') }}
+      </code>
+    </pre>
+  </div>
+</div>

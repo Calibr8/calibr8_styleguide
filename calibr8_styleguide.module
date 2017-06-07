@@ -1,0 +1,211 @@
+<?php
+
+/**
+ * List all the items you want on the styleguide page here.
+ * Or add new ones.
+ *
+ * @param $styleguide
+ *
+ * @return array
+ *    array of styleguide items to show on the styleguide page.
+ */
+function _styleguide_builder($styleguide) {
+
+  // Colors
+
+  $items['colors'] = [
+    '#title' => 'Colors',
+    '#template' => 'sg-colors',
+    '#weight' => 1
+  ];
+
+  // Icons
+
+  $items['icons'] = [
+    '#title' => 'Icons',
+    '#template' => 'sg-icons',
+    '#weight' => 5,
+    'context' => [
+      'icons' => $styleguide->iconsListBuilder(),
+    ]
+  ];
+
+  // Grid
+
+  $items['grid'] = [
+    '#title' => 'Grid',
+    '#template' => 'sg-grid',
+    '#weight' => 10
+  ];
+
+  $items['equal-heights'] = [
+    '#title' => 'Equal Heights',
+    '#template' => 'sg-equal-heights',
+    '#weight' => 15
+  ];
+
+  // Typography
+
+  $items['headings'] = [
+    '#title' => 'Headings',
+    '#template' => 'sg-headings',
+    '#weight' => 20
+  ];
+
+  $items['paragraph'] = [
+    '#title' => 'Paragraph styles',
+    '#template' => 'sg-paragraph',
+    '#weight' => 21
+  ];
+
+  $items['text'] = [
+    '#title' => 'Text styles',
+    '#template' => 'sg-text-styles',
+    '#weight' => 22
+  ];
+
+  $items['alignment'] = [
+    '#title' => 'Alignment',
+    '#template' => 'sg-alignment',
+    '#weight' => 23
+  ];
+
+  $items['lists'] = [
+    '#title' => 'Lists',
+    '#template' => 'sg-lists',
+    '#weight' => 24
+  ];
+
+  $items['description-list'] = [
+    '#title' => 'Description lists',
+    '#template' => 'sg-description-list',
+    '#weight' => 25
+  ];
+
+  $items['images'] = [
+    '#title' => 'Images',
+    '#template' => 'sg-images',
+    '#weight' => 26,
+    'context' => [
+      'image_path' => $styleguide->imagePath(),
+    ]
+  ];
+
+  $items['blockquote'] = [
+    '#title' => 'Block quotes',
+    '#template' => 'sg-blockquote',
+    '#weight' => 27
+  ];
+
+  // Buttons
+
+  $items['buttons'] = [
+    '#title' => 'Buttons',
+    '#template' => 'sg-buttons',
+    '#weight' => 40
+  ];
+
+  // Read more
+
+  $items['readmore'] = [
+    '#title' => 'Read more link',
+    '#template' => 'sg-readmore',
+    '#weight' => 45
+  ];
+
+  // Pager
+
+  $items['pager'] = [
+    '#title' => 'Pager',
+    '#template' => 'sg-pager',
+    '#weight' => 50,
+    'context' => [
+      'pager' => $styleguide->pagerBuilder(),
+    ]
+  ];
+
+  // Pills
+
+  $items['pills'] = [
+    '#title' => 'Pills',
+    '#template' => 'sg-pills',
+    '#weight' => 55
+  ];
+
+  // Status messages
+
+  $items['status'] = [
+    '#title' => 'Status messages',
+    '#template' => 'sg-status',
+    '#weight' => 60,
+    'context' => [
+      'status' => $styleguide->messagesBuilder(),
+    ]
+  ];
+
+  // Tables
+
+  $items['table'] = [
+    '#title' => 'Tables',
+    '#template' => 'sg-table',
+    '#weight' => 65
+  ];
+
+  // Forms
+
+  $items['form'] = [
+    '#title' => 'Forms',
+    '#template' => 'sg-form',
+    '#weight' => 70,
+    'context' => [
+      'form' => $styleguide->formBuilder(),
+    ]
+  ];
+
+  // Menus
+
+  $items['menus'] = [
+    '#title' => "Menu's",
+    '#template' => 'sg-menus',
+    '#weight' => 75,
+  ];
+
+  return $items;
+}
+
+/*
+ * Implements hook_theme().
+ */
+function calibr8_styleguide_theme() {
+
+  $themes = [
+    'calibr8_styleguide_main' => [
+      'variables' => [
+        'content' => NULL,
+        'form' => NULL,
+        'menu_items' => NULL,
+      ],
+      'template' => 'calibr8_styleguide',
+      'render'
+    ],
+    'calibr8_styleguide_item' => [
+      'variables' => [
+        'content' => NULL,
+        'title' => NULL,
+        'id' => NULL,
+        'weight' => NULL,
+      ],
+      'template' => 'calibr8_styleguide-item',
+    ]
+  ];
+
+  return $themes;
+}
+
+/**
+ * Helper function to sort items by weight.
+ */
+function _sortByWeight(array $a, array $b) {
+  if ($a['weight'] == $b['weight']) return 0;
+  return $a['weight'] < $b['weight'] ? -1 : 1;
+}

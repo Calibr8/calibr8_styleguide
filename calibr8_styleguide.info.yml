@@ -1,0 +1,7 @@
+name: Calibr8 Styleguide
+description: Creates a page with style elements and their html source.
+package: Calibr8
+type: module
+core: 8.x
+dependencies:
+  - calibr8_admin

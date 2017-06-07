@@ -1,0 +1,13 @@
+# Menu item for styleguide page.
+system.calibr8_styleguide:
+  title: 'Style guide'
+  description: 'View the styleguide.'
+  route_name: calibr8_styleguide.styleguide
+  parent: system.admin
+  weight: 5
+# Menu item for configuration page.
+calibr8_styleguide.settings:
+  title: 'Styleguide settings'
+  description: 'Configure the styleguide page.'
+  route_name: calibr8_styleguide.settings
+  parent: system.admin_config_calibr8

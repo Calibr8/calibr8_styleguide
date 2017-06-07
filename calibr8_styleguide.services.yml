@@ -1,0 +1,8 @@
+services:
+  calibr8_styleguide.twig_extension:
+    class: Drupal\calibr8_styleguide\TwigExtension\calibr8StyleguideTwigStyleguide
+    tags:
+      - { name: twig.extension }
+  plugin.manager.calibr8_styleguide:
+      class: Drupal\calibr8_styleguide\Calibr8StyleguidePluginManager
+      arguments: ['@container.namespaces', '@cache.default', '@module_handler']

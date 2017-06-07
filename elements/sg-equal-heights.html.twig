@@ -1,0 +1,51 @@
+<p>Make articles in a view the same height per row. More equal heights queries can be added in your subtheme script.js file.</p>
+
+<div class="view row equal-heights sg-eqheight-row">
+  <div class="views-row sg-grid-col col col-md-4">
+    <article class="default-border background-white"><p>Donec ullamcorper nulla non metus auctor fringilla.</p>
+    </article>
+  </div>
+  <div class="views-row sg-grid-col col col-md-4">
+    <article class="default-border background-white">
+      <p>Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum.</p>
+    </article>
+  </div>
+  <div class="views-row sg-grid-col col col-md-4">
+    <article class="default-border background-white">
+      <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p></article>
+  </div>
+</div>
+
+<div class="row">
+<div class="col col-md-6">
+  <pre class="sg-code">
+    <code class="language-markup">
+      {{ styleguideHtml('
+<div class="container">
+  <div class="view row equal-heights">
+    <div class="views-row col col-md-4"><article>...</article></div>
+    <div class="views-row col col-md-4"><article>...</article></div>
+    <div class="views-row col col-md-4"><article>...</article></div>
+  </div>
+</div>
+      ') }}
+    </code>
+  </pre>
+</div>
+
+<div class="col col-md-6">
+  <pre class="sg-code">
+    <code class="language-javascript">
+      {{ styleguideHtml("
+/* Excerpt from script.js */
+
+var matchHeightElements = [
+  '.equal-heights article',
+  '.my-custom-view .node',
+  '...'
+];
+            ") }}
+    </code>
+  </pre>
+</div>
+</div>

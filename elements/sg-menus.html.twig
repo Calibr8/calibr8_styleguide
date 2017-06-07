@@ -1,0 +1,188 @@
+<p>Add classes to menu blocks with the <a href="http://www.drupal.org/project/block_class" target="_blank">Block Class</a> module.</p>
+
+<h4>Modifier classes</h4>
+
+<ul>
+  <li><strong>menu-horizontal</strong></li>
+  <li><strong>menu-centered</strong></li>
+  <li><strong>menu-dropdown</strong></li>
+</ul>
+
+<h3>Default menu</h3>
+
+<div class="row">
+  <div class="col col-md-6">
+
+    <div class="clearfix">
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="#">Home</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">About us</a>
+        </li>
+        <li class="menu-item menu-item--active-trail">
+          <a href="#" class="is-active">Services</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="col col-md-6">
+
+    <pre class="sg-code">
+      <code class="language-markup">
+        {{ styleguideHtml('
+<ul class="menu">
+  <li class="menu-item">
+    ...
+  </li>
+</ul>
+              ') }}
+      </code>
+    </pre>
+
+  </div>
+</div>
+
+<h3>Horizontal menu</h3>
+
+<div class="row">
+  <div class="col col-md-6">
+
+    <div class="menu-horizontal clearfix">
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="#">Home</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">About us</a>
+        </li>
+        <li class="menu-item menu-item--active-trail">
+          <a href="#" class="is-active">Services</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="col col-md-6">
+
+    <pre class="sg-code">
+      <code class="language-markup">
+        {{ styleguideHtml('
+<div class="menu-horizontal clearfix">
+  <ul class="menu">
+    <li class="menu-item">
+      ...
+    </li>
+  </ul>
+</div>
+              ') }}
+      </code>
+    </pre>
+
+  </div>
+</div>
+
+<h3>Centered menu</h3>
+
+<div class="row">
+  <div class="col col-md-6">
+
+    <div class="menu-centered clearfix">
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="#">Home</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">About us</a>
+        </li>
+        <li class="menu-item menu-item--active-trail">
+          <a href="#" class="is-active">Services</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="col col-md-6">
+
+    <pre class="sg-code">
+      <code class="language-markup">
+        {{ styleguideHtml('
+<div class="menu-centered clearfix">
+  <ul class="menu">
+    <li class="menu-item">
+      ...
+    </li>
+  </ul>
+</div>
+              ') }}
+      </code>
+    </pre>
+
+  </div>
+</div>
+
+
+<h3>Dropdown menu</h3>
+<p>Make sure all children are rendered.</p>
+
+<div class="row">
+  <div class="col col-md-6">
+
+    <div class="menu-dropdown clearfix">
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="#">Home</a>
+        </li>
+        <li class="menu-item menu-item--expanded">
+          <a href="#">About us</a>
+          <ul class="menu">
+            <li class="menu-item">
+              <a href="#">History</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Employees</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Locations</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item menu-item--active-trail">
+          <a href="#" class="is-active">Services</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="col col-md-6">
+
+    <pre class="sg-code">
+      <code class="language-markup">
+        {{ styleguideHtml('
+<div class="menu-dropdown clearfix">
+  <ul class="menu">
+    <li class="menu-item">
+      ...
+    </li>
+  </ul>
+</div>
+              ') }}
+      </code>
+    </pre>
+
+  </div>
+</div>

@@ -1,0 +1,17 @@
+# Styleguide page route
+calibr8_styleguide.styleguide:
+  path: '/styleguide'
+  defaults:
+    _controller: '\Drupal\calibr8_styleguide\Controller\Calibr8StyleguideController::styleguidePage'
+    _title: 'Style guide'
+  requirements:
+    _permission: 'access styleguide'
+
+# Styleguide settings page
+calibr8_styleguide.settings:
+  path: '/admin/config/calibr8/styleguide'
+  defaults:
+    _form: '\Drupal\calibr8_styleguide\Form\SettingsForm'
+    _title: 'Styleguide'
+  requirements:
+    _permission: 'administer site configuration'

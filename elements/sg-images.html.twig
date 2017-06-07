@@ -1,0 +1,30 @@
+<p>Text can float around an image when it's aligned to the left or right.</p>
+<div class="row">
+  <div class="col col-md-6">
+    <div class="sg-example">
+      <p>
+        <span class="inline-image float-left"><img src="{{ image_path }}/placeholder.png"></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+      </p>
+      <p>
+        <span class="inline-image float-right"><img src="{{ image_path }}/placeholder.png"></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+      </p>
+    </div>
+  </div>
+  <div class="col col-md-6">
+    <pre class="sg-code">
+      <code class="language-markup">
+        {{ styleguideHtml('
+<p>
+  <span class="inline-image float-left"><img src="image.png"></span>
+  Lorem ipsum...
+</p>
+
+<p>
+  <span class="inline-image float-right"><img src="image.png"></span>
+  Lorem ipsum...
+</p>
+        ') }}
+      </code>
+    </pre>
+  </div>
+</div>

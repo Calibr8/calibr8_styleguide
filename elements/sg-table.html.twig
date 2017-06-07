@@ -1,0 +1,85 @@
+<p>Used for displaying tabular data.</p>
+<p class="icon-status-warning"> Keep in mind that large tables are
+  <strong class="color-error">not</strong> responsive!</p>
+<h4>Modifier classes</h4>
+<ul>
+  <li><strong>striped:</strong> Adds striping on odd/even rows</li>
+  <li><strong>vline:</strong> Adds vertical column lines</li>
+  <li><strong>full-width:</strong> Table takes full width of its containing element</li>
+  <li><strong>row-links:</strong> Add hover effects for rows</li>
+</ul>
+<div class="row">
+  <div class="col col-md-6">
+    <div class="sg-example">
+      <table class="table striped full-width row-links">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Function</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>1</th>
+          <td>John</td>
+          <td>Brooks</td>
+          <td>Lead Communications Designer</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>Ronnie</td>
+          <td>Rodriguez</td>
+          <td>District Usability Assistant</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>Amanda</td>
+          <td>Bates</td>
+          <td>Senior Implementation Facilitator</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td>Josh</td>
+          <td>Banner</td>
+          <td>Senior Paradigm Architect</td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td>Tony</td>
+          <td>Stark</td>
+          <td>Global Configuration Developer</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col col-md-6">
+    <pre class="sg-code">
+      <code class="language-markup">
+        {{ styleguideHtml('
+<table class="table striped full-width row-links">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>...</th>
+      <th>...</th>
+      <th>...</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>X</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    ...
+  </tbody>
+</table>
+      ') }}
+      </code>
+    </pre>
+  </div>
+</div>

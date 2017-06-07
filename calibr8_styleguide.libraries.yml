@@ -1,0 +1,15 @@
+prism:
+  version: 1.x
+  css:
+    theme:
+      prism/prism.css: {}
+  js:
+    prism/prism.js: {}
+
+calibr8_styleguide:
+  version: 1.x
+  css:
+    theme:
+      css/calibr8-styleguide.css: {}
+  js:
+    js/calibr8-styleguide.js: {}

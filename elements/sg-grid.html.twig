@@ -1,0 +1,168 @@
+<p>Create responsive layouts by using the grid classes.</p>
+
+<h3>Available columns</h3>
+<p>There are 12 columns, by default a column spans all 12 of them. Add classes to make columns smaller.</p>
+
+<div class="row">
+  <div class="sg-grid-col col col-1"><span>col-1</span></div>
+  <div class="sg-grid-col col col-1"><span>col-1</span></div>
+  <div class="sg-grid-col col col-1"><span>col-1</span></div>
+  <div class="sg-grid-col col col-1"><span>col-1</span></div>
+  <div class="sg-grid-col col col-1"><span>col-1</span></div>
+  <div class="sg-grid-col col col-1"><span>col-1</span></div>
+  <div class="sg-grid-col col col-1"><span>col-1</span></div>
+  <div class="sg-grid-col col col-1"><span>col-1</span></div>
+  <div class="sg-grid-col col col-1"><span>col-1</span></div>
+  <div class="sg-grid-col col col-1"><span>col-1</span></div>
+  <div class="sg-grid-col col col-1"><span>col-1</span></div>
+  <div class="sg-grid-col col col-1"><span>col-1</span></div>
+</div>
+<div class="row">
+  <div class="sg-grid-col col col-12"><span>col-12</span></div>
+</div>
+<div class="row">
+  <div class="sg-grid-col col col-6"><span>col-6</span></div>
+  <div class="sg-grid-col col col-6"><span>col-6</span></div>
+</div>
+<div class="row">
+  <div class="sg-grid-col col col-4"><span>col-4</span></div>
+  <div class="sg-grid-col col col-4"><span>col-4</span></div>
+  <div class="sg-grid-col col col-4"><span>col-4</span></div>
+</div>
+<div class="row">
+  <div class="sg-grid-col col col-3"><span>col-3</span></div>
+  <div class="sg-grid-col col col-3"><span>col-3</span></div>
+  <div class="sg-grid-col col col-3"><span>col-3</span></div>
+  <div class="sg-grid-col col col-3"><span>col-3</span></div>
+</div>
+<div class="row">
+  <div class="sg-grid-col col col-2"><span>col-2</span></div>
+  <div class="sg-grid-col col col-2"><span>col-2</span></div>
+  <div class="sg-grid-col col col-2"><span>col-2</span></div>
+  <div class="sg-grid-col col col-2"><span>col-2</span></div>
+  <div class="sg-grid-col col col-2"><span>col-2</span></div>
+  <div class="sg-grid-col col col-2"><span>col-2</span></div>
+</div>
+
+<h3>Getting started</h3>
+<p>Most of the time, a container is already defined in your page layout. So there's no need for including another container in your component layout.<br />
+When creating a multiple column layout, always start with a row. This creates negative margins left and right, which will be filled in again by your columns.</p>
+
+<pre class="sg-code">
+  <code class="language-markup">
+    {{ styleguideHtml('
+<div class="container">
+  <div class="row">
+    <div class="col col-6">...</div>
+    <div class="col col-6">...</div>
+  </div>
+</div>
+    ') }}
+  </code>
+</pre>
+
+<h3>Grid breakpoints</h3>
+<p>Set your column widths from a starting breakpoint.<br />
+Make your browser smaller to see this in action.</p>
+
+<div class="row">
+  <div class="sg-grid-col col col-sm-6 col-md-4 col-lg-3 col-xl-2">
+    <span>col-sm-6 col-md-4 col-lg-3 col-xl-2</span></div>
+  <div class="sg-grid-col col col-sm-6 col-md-4 col-lg-3 col-xl-2">
+    <span>col-sm-6 col-md-4 col-lg-3 col-xl-2</span></div>
+  <div class="sg-grid-col col col-sm-6 col-md-4 col-lg-3 col-xl-2">
+    <span>col-sm-6 col-md-4 col-lg-3 col-xl-2</span></div>
+  <div class="sg-grid-col col col-sm-6 col-md-4 col-lg-3 col-xl-2">
+    <span>col-sm-6 col-md-4 col-lg-3 col-xl-2</span></div>
+  <div class="sg-grid-col col col-sm-6 col-md-4 col-lg-3 col-xl-2">
+    <span>col-sm-6 col-md-4 col-lg-3 col-xl-2</span></div>
+  <div class="sg-grid-col col col-sm-6 col-md-4 col-lg-3 col-xl-2">
+    <span>col-sm-6 col-md-4 col-lg-3 col-xl-2</span></div>
+</div>
+
+<pre class="sg-code">
+  <code class="language-markup">
+    {{ styleguideHtml('
+<div class="container">
+  <div class="row">
+    <div class="col col-sm-6 col-md-4 col-lg-3 col-xl-2">...</div>
+    <div class="col col-sm-6 col-md-4 col-lg-3 col-xl-2">...</div>
+  </div>
+</div>
+      ') }}
+  </code>
+</pre>
+
+<h3>Grid offset</h3>
+<p>Add an empty space before your column.</p>
+<div class="row">
+  <div class="sg-grid-col col col-md-3"><span>col-md-3</span></div>
+  <div class="sg-grid-col col col-md-3 col-md-offset-2"><span>col-md-3 col-md-offset-2</span></div>
+</div>
+<pre class="sg-code">
+  <code class="language-markup">
+    {{ styleguideHtml('
+<div class="container">
+  <div class="row">
+    <div class="col col-md-3">...</div>
+    <div class="col col-md-3 col-md-offset-2">...</div>
+  </div>
+</div>
+    ') }}
+  </code>
+</pre>
+
+<h3>Grid push/pull</h3>
+<p>Change the order of your columns.</p>
+<ul>
+  <li><strong>Push:</strong> move x columns to the right</li>
+  <li><strong>Pull:</strong> move x columns to the left</li>
+</ul>
+<div class="row">
+  <div class="sg-grid-col col col-md-4 col-md-push-8"><span><strong>A</strong> - col-md-4 col-md-push-8</span>
+  </div>
+  <div class="sg-grid-col col col-md-8 col-md-pull-4"><span><strong>B</strong> - col-md-8 col-md-pull-4</span>
+  </div>
+</div>
+<pre class="sg-code">
+  <code class="language-markup">
+    {{ styleguideHtml('
+<div class="container">
+  <div class="row">
+    <div class="col col-md-4 col-md-push-8"><span>A</span></div>
+    <div class="col col-md-8 col-md-pull-4"><span>B</span></div>
+  </div>
+</div>
+    ') }}
+  </code>
+</pre>
+
+<h3>Nested columns</h3>
+<p>Create a new row in your column to split up your layout again. Be aware that this sublayout has 12 columns regardless from it's parent width.</p>
+
+<div class="row">
+  <div class="sg-grid-col col col-2"><span>col-2</span></div>
+  <div class="sg-grid-col col col-10">
+    <div class="row">
+      <div class="sg-grid-col col col-6"><span>col-6</span></div>
+      <div class="sg-grid-col col col-6"><span>col-6</span></div>
+    </div>
+  </div>
+</div>
+<pre class="sg-code">
+  <code class="language-markup">
+    {{ styleguideHtml('
+<div class="container">
+  <div class="row">
+    <div class="col col-2">...</div>
+    <div class="col col-10">
+      <div class="row">
+        <div class="col col-6">...</div>
+        <div class="col col-6">...</div>
+      </div>
+    </div>
+  </div>
+</div>
+    ') }}
+  </code>
+</pre>

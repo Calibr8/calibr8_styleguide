@@ -1,0 +1,4 @@
+access styleguide:
+  title: 'View the styleguide page'
+  description: 'Give to people who may see the styleguide page.'
+  restrict access: FALSE
