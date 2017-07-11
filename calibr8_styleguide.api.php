@@ -13,24 +13,5 @@
  *   An array of items to render.
  */
 function hook_calibr8_styleguide_items() {
-
-  $items['table2'] = [
-    '#title' => 'Table2',
-    '#template' => 'table',
-    '#weight' => 55
-  ];
-
-  $items['text2'] = [
-    '#title' => 'Text styles 2',
-    '#template' => 'text-styles',
-    '#weight' => 10
-  ];
-
-  $items['titles2'] = [
-    '#title' => 'Titles 2',
-    '#template' => 'titles',
-    '#weight' => 55
-  ];
-
   return $items;
 }
