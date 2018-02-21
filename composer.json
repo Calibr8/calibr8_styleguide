@@ -3,7 +3,7 @@
     "description": "Creates a page with style elements and their html source.",
     "type": "drupal-custom",
     "keywords": ["Drupal 8","Calibr8"],
-    "homepage": "https://github.com/stevenvdhout/calibr8_styleguide",
+    "homepage": "https://github.com/Calibr8/calibr8_styleguide",
     "license": "GPL-2.0+",
     "authors": [
         {
